@@ -1,0 +1,177 @@
+<main id="app" class="main-search">
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    .content-list {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 2em;
+      width: 100%;
+    }
+
+    .col1 {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 50%;
+      text-align: center;
+      position: relative;
+    }
+
+    .content-list-scroll {
+      flex-direction: column;
+      width: 18%;
+      align-items: flex-start;
+      text-align: left;
+      overflow-y: auto;
+      height: 80%;
+      position: fixed;
+      padding: 1rem;
+      border-right: 1px solid var(--static8);
+    }
+
+    .content-list-scroll > * {
+      text-align: left;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .fixed-wrapper {
+      position: absolute;
+    }
+
+    .doc-h3 {
+      opacity: 20%;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .doc-page-link {
+      text-align: left;
+      border-radius: var(--border05);
+      padding: 0.2rem 1rem;
+      width: 100%;
+    }
+
+    .doc-page-link:hover {
+      background: var(--primary20);
+    }
+
+    .setting-div {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .main-content {
+      flex-direction: column;
+      width: 70%;
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 5rem;
+      padding-right: 10rem;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .wrapper {
+        display: none;
+      }
+    }
+  </style>
+  <div class="wrapper">
+    <div class="fixed-wrapper">
+      <div class="content-list content-list-scroll">
+        <div class="col1" style="width: 100%; align-items: flex-start">
+          <h3 class="doc-h3">Options</h3>
+          <a href="#app" class="doc-page-link">General</a>
+          <a href="#advanced" class="doc-page-link">Advanced</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="general" class="setting-div">
+    <div class="main-content">
+      <h2>General</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rem
+        perferendis quis saepe ipsam itaque voluptates non quia cum natus,
+        excepturi porro nulla nobis, mollitia esse, fugiat perspiciatis eum
+        harum!
+      </p>
+      <div class="paragraph">
+        <h3 id="problem">The Problem</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+          magni.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad
+          dolore officia impedit cumque totam corrupti asperiores. Sint ipsam
+          voluptas sit ratione id nihil temporibus modi, alias debitis, minus
+          odit.
+        </p>
+        <p id="advanced">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
+          fugiat voluptatum ipsa, itaque alias voluptatibus nihil quod amet vero
+          numquam ad voluptate? Id facere qui totam est? Dolor, placeat
+          laudantium.
+        </p>
+      </div>
+      <div class="paragraph">
+        <h3>Advanced</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
+          debitis alias nesciunt quia perferendis corrupti voluptas culpa modi
+          aliquam, a rerum aspernatur ratione. Consequuntur perspiciatis rerum,
+          praesentium accusamus a veniam?
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, est
+          molestiae. Cupiditate quae excepturi deleniti ullam expedita officia
+          ipsa cum laudantium aspernatur blanditiis aperiam, eum voluptatum quos
+          qui accusantium mollitia.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="contextMenu" class="context-menu" style="display: none">
+    <ul>
+      <li>
+        <button onclick="location.reload()">
+          <i class="fa-solid fa-rotate-right"></i> Reload
+        </button>
+      </li>
+      <li>
+        <button onclick="openHome2()">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+      </li>
+      <li>
+        <button onclick="openSearch2()">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </li>
+      <li>
+        <button onclick="openAnime2()">
+          <i class="fa-solid fa-clock-rotate-left"></i> Last Wached
+        </button>
+      </li>
+      <li>
+        <button onclick="openBookmark()">
+          <i class="fa-solid fa-star"></i> Bookmarkes
+        </button>
+      </li>
+      <li>
+        <button disabled onclick="openSetting()">
+          <i class="fa-solid fa-gear"></i> Settings
+        </button>
+      </li>
+    </ul>
+  </div>
+</main>

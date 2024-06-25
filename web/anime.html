@@ -1,0 +1,142 @@
+<main id="app" class="main-anime">
+  <div class="main-con main-anime" id="main">
+    <div class="title-con">
+      <h2 class="title" id="title"></h2>
+    </div>
+    <div class="anime-con">
+      <div class="anime" id="anime">
+        <div id="animeLoader" class="loader">
+          <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="anime-options">
+        <div class="left">
+          <button
+            class="anime-options-a data-tooltip"
+            id="preEp"
+            data-tooltip-content="Previos episode"
+            onclick="preEp()"
+          >
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button
+            class="anime-options-a data-tooltip"
+            id="nextEp"
+            data-tooltip-content="Next episode"
+            onclick="nextEp()"
+          >
+            <i class="fa-solid fa-forward"></i>
+          </button>
+          <a class="anime-options-a data-tooltip" data-tooltip-content="Light"
+            ><i class="fa-solid fa-lightbulb"></i
+          ></a>
+        </div>
+        <div class="right">
+          <a class="anime-options-a">
+            <i class="fa-solid fa-play"></i>
+            <span id="crEp"></span>
+          </a>
+          <a class="anime-options-a">
+            <i class="fa-solid fa-closed-captioning"></i>
+            <span id="ccEps"></span>
+          </a>
+          <a class="anime-options-a">
+            <i class="fa-solid fa-microphone"></i>
+            <span id="dubEps"></span>
+          </a>
+          <a
+            class="anime-options-a data-tooltip"
+            data-tooltip-content="Bookmark"
+            ><i class="fa-regular fa-bookmark"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="episode-box">
+    <h4>Language:</h4>
+    <span class="border-line"></span>
+    <div class="episode-con">
+      <button onclick="toSub()" id="toSub" class="episode-element language">
+        SUB
+      </button>
+      <button onclick="toDub()" id="toDub" class="episode-element language">
+        DUB
+      </button>
+    </div>
+    <h4 class="episode-title">Episodes: <span id="arEp"></span></h4>
+    <span class="border-line"></span>
+    <div class="episode-con" id="episodeCon"></div>
+  </div>
+  <div class="info-box" id="how">
+    <div class="info-box-left">
+      <img
+        src="/public/pyanime-poster-01.png"
+        alt="anime image"
+        class="anime-image"
+        id="animeImage"
+      />
+    </div>
+    <div class="info-box-right">
+      <p class="anime-title step" id="animeTitle">Loading...</p>
+      <p class="step des-title extra">Description</p>
+      <p class="anime-des step" id="animeDes"></p>
+      <p class="anime-episode step extra">
+        <span>Total episodes: </span>
+        <span id="animeEpisode"></span>
+      </p>
+      <p class="anime-type step extra" id="animeType"></p>
+      <p class="anime-gerne step extra">
+        <span>Gerne: </span>
+        <span id="animeGerne"></span>
+      </p>
+    </div>
+  </div>
+  <div id="contextMenu" class="context-menu" style="display: none">
+    <ul>
+      <li>
+        <button onclick="location.reload()">
+          <i class="fa-solid fa-rotate-right"></i> Reload
+        </button>
+      </li>
+
+      <li>
+        <button onclick="openHome2()">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+      </li>
+      <li>
+        <button onclick="openSearch2()">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </li>
+      <li style="border-top: 1px solid var(--text20)">
+        <button id="preEp2" onclick="preEp()">
+          <i class="fa-solid fa-backward"></i> Previos episode
+        </button>
+      </li>
+      <li style="border-bottom: 1px solid var(--text20)">
+        <button id="nextEp2" onclick="nextEp()">
+          <i class="fa-solid fa-forward"></i> Next episode
+        </button>
+      </li>
+      <li>
+        <button onclick="openBookmark()">
+          <i class="fa-solid fa-star"></i> Bookmarkes
+        </button>
+      </li>
+      <li>
+        <button onclick="openSetting()">
+          <i class="fa-solid fa-gear"></i> Settings
+        </button>
+      </li>
+    </ul>
+  </div>
+</main>

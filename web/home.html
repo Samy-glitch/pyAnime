@@ -1,0 +1,100 @@
+<main id="app" class="main-home">
+  <div class="main-con" id="main">
+    <div class="main-text">
+      <h1>
+        Enjoy
+        <br />
+        Your Favorite
+        <br />
+        <span class="color-effect">Anime</span>
+        Without
+        <br />
+        Any Ads
+      </h1>
+      <p>
+        Best platfrom for streaming
+        <br />
+        free anime without any ADS.
+      </p>
+    </div>
+    <div class="main-id">
+      <p style="display: flex; align-items: center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="var(--text)"
+        >
+          <path
+            d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"
+          />
+        </svg>
+        Search Your Favorite Anime
+      </p>
+      <div class="id-con">
+        <div id="searchForm">
+          <input
+            type="text"
+            class="search"
+            name="search"
+            id="search"
+            placeholder=" "
+          />
+          <label for="search" class="search-lable"> Search </label>
+          <button class="search-btn" onclick="searchFunction()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="var(--text)"
+            >
+              <path
+                d="M762.69-160.92 524.46-399.16q-30 22.77-65.79 35.27-35.79 12.5-73.87 12.5-93.58 0-159.11-65.51-65.53-65.51-65.53-159.04 0-93.52 65.51-159.1 65.51-65.57 159.04-65.57 93.52 0 159.1 65.53 65.57 65.53 65.57 159.11 0 39.23-12.88 75.02-12.89 35.8-34.89 64.64l238.23 238.23-37.15 37.16ZM384.77-403.38q72.31 0 122.46-50.16 50.16-50.15 50.16-122.46t-50.16-122.46q-50.15-50.16-122.46-50.16t-122.46 50.16Q212.15-648.31 212.15-576t50.16 122.46q50.15 50.16 122.46 50.16Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list">
+    <h1 class="ani-title">Recent Release</h1>
+    <div id="aniCon1" class="ani items recent"></div>
+  </div>
+  <div id="contextMenu" class="context-menu" style="display: none">
+    <ul>
+      <li>
+        <button onclick="location.reload()">
+          <i class="fa-solid fa-rotate-right"></i> Reload
+        </button>
+      </li>
+      <li>
+        <button disabled onclick="openHome2()">
+          <i class="fa-solid fa-house"></i> Home
+        </button>
+      </li>
+      <li>
+        <button onclick="openSearch2()">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </li>
+      <li>
+        <button onclick="openAnime2()">
+          <i class="fa-solid fa-clock-rotate-left"></i> Last Wached
+        </button>
+      </li>
+      <li>
+        <button onclick="openBookmark()">
+          <i class="fa-solid fa-star"></i> Bookmarkes
+        </button>
+      </li>
+      <li>
+        <button onclick="openSetting()">
+          <i class="fa-solid fa-gear"></i> Settings
+        </button>
+      </li>
+    </ul>
+  </div>
+</main>
