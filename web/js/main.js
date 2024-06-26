@@ -23,6 +23,8 @@ function loadjs() {
     openSearch();
   } else if (dataType == "setting") {
     openSetting2();
+  } else {
+    openHome();
   }
 }
 
@@ -155,7 +157,7 @@ function showErr(errCode, type) {
     title: "Oops...",
     text: "Something went wrong!",
     color: "var(--text)",
-    background: "#071014",
+    background: "var(--primary16)",
     allowOutsideClick: false,
     allowEscapeKey: false,
     confirmButtonColor: "var(--primary)",

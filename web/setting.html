@@ -34,7 +34,7 @@
       border-right: 1px solid var(--static8);
     }
 
-    .content-list-scroll > * {
+    .content-list-scroll>* {
       text-align: left;
     }
 
@@ -78,6 +78,51 @@
       padding-right: 10rem;
     }
 
+    .main-content>h2 {
+      padding: 1em 0;
+    }
+
+    .s-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .themes-btn {
+      margin-left: 15px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.2s;
+    }
+
+    .themes-btn>i {
+      margin-right: 8px;
+    }
+
+    .themes-btn:hover {
+      background-color: var(--primary20);
+    }
+
+
+    .themes-btn:disabled,
+    .themes-btn.active {
+      background-color: var(--primary50);
+    }
+
+    .source-seclect {
+      margin-left: 15px;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 8px;
+      border-radius: 8px;
+      border-color: var(--text20);
+    }
+
+    .source-seclect option {
+      padding: 5px 0;
+
+    }
+
     @media screen and (max-width: 1000px) {
       .wrapper {
         display: none;
@@ -98,46 +143,30 @@
   <div id="general" class="setting-div">
     <div class="main-content">
       <h2>General</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rem
-        perferendis quis saepe ipsam itaque voluptates non quia cum natus,
-        excepturi porro nulla nobis, mollitia esse, fugiat perspiciatis eum
-        harum!
-      </p>
-      <div class="paragraph">
-        <h3 id="problem">The Problem</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-          magni.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad
-          dolore officia impedit cumque totam corrupti asperiores. Sint ipsam
-          voluptas sit ratione id nihil temporibus modi, alias debitis, minus
-          odit.
-        </p>
-        <p id="advanced">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus
-          fugiat voluptatum ipsa, itaque alias voluptatibus nihil quod amet vero
-          numquam ad voluptate? Id facere qui totam est? Dolor, placeat
-          laudantium.
-        </p>
+      <div class="s-options">
+        <span>Theme</span>
+        <div class="s-buttons">
+          <button class="themes-btn" disabled><i class="fa-solid fa-moon"></i> Dark</button>
+          <button class="themes-btn"><i class="fa-solid fa-lightbulb"></i> Light</button>
+        </div>
       </div>
-      <div class="paragraph">
-        <h3>Advanced</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
-          debitis alias nesciunt quia perferendis corrupti voluptas culpa modi
-          aliquam, a rerum aspernatur ratione. Consequuntur perspiciatis rerum,
-          praesentium accusamus a veniam?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, est
-          molestiae. Cupiditate quae excepturi deleniti ullam expedita officia
-          ipsa cum laudantium aspernatur blanditiis aperiam, eum voluptatum quos
-          qui accusantium mollitia.
-        </p>
-      </div>
+
+      <h2>Advanced</h3>
+        <div class="s-options">
+          <div>
+
+            <span>Source</span>
+            <select name="source" id="source" class="source-seclect">
+              <option value="gogoanimes.org" selected>gogoanimes.org</option>
+              <option value="gogoanime.run">gogoanime.run</option>
+              <option value="anitaku.io">anitaku.io</option>
+            </select>
+          </div>
+          <div class="s-buttons">
+            <button class="themes-btn active">Save</button>
+          </div>
+        </div>
+
     </div>
   </div>
   <div id="contextMenu" class="context-menu" style="display: none">

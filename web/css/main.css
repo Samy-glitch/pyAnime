@@ -82,6 +82,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.swal2-container .swal2-popup {
+  backdrop-filter: blr(10px);
+}
 
 /* Nav Bar */
 
